@@ -54,11 +54,15 @@ for i in range(0,original_graph_edges_length):
    if does_add_edge_forms_a_cycle: #if true remove the edge
     MST.remove_edge(fromNode, toNode)
     mstValue = mstValue - edgeWeight #subtract the weight from the MST value
+   else:
+    print("Added Edges ", fromNode, " and ", toNode, " having weight " , edgeWeight )
+    
 
 pos = nx.spring_layout(MST, seed=7)  # positions for all nodes - seed for reproducibility
 
 # Draw nodes
 nx.draw_networkx_nodes(MST, pos, node_size=700)
+
 
 # Draw edges
 nx.draw_networkx_edges(MST, pos, width=2, style="solid")
