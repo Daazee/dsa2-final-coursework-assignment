@@ -100,6 +100,9 @@ print("Final chess board state\n")
 for row in chessboard:
     print(" ".join(str(cell).rjust(2, ' ') for cell in row)) #format each value to avoid unwanted space
 
+    
+# print("\n")
+
 if success:
     print("\nThe Knight's Tour was successfully completed.")
 else:
